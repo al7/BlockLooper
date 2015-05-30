@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1320AB9C1B196C5B008B5188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320AB9B1B196C5B008B5188 /* AppDelegate.swift */; };
+		1320AB9E1B196C5B008B5188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320AB9D1B196C5B008B5188 /* ViewController.swift */; };
+		1320ABA31B196C5B008B5188 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1320ABA21B196C5B008B5188 /* Images.xcassets */; };
+		1320ABB21B196C5B008B5188 /* BlockLooperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320ABB11B196C5B008B5188 /* BlockLooperTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1320ABAC1B196C5B008B5188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1320AB8E1B196C5B008B5188 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1320AB951B196C5B008B5188;
+			remoteInfo = BlockLooper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1320AB961B196C5B008B5188 /* BlockLooper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockLooper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1320AB9A1B196C5B008B5188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1320AB9B1B196C5B008B5188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1320AB9D1B196C5B008B5188 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1320ABA21B196C5B008B5188 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1320ABAB1B196C5B008B5188 /* BlockLooperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockLooperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1320ABB01B196C5B008B5188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1320ABB11B196C5B008B5188 /* BlockLooperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockLooperTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1320AB931B196C5B008B5188 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1320ABA81B196C5B008B5188 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1320AB8D1B196C5B008B5188 = {
+			isa = PBXGroup;
+			children = (
+				1320AB981B196C5B008B5188 /* BlockLooper */,
+				1320ABAE1B196C5B008B5188 /* BlockLooperTests */,
+				1320AB971B196C5B008B5188 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1320AB971B196C5B008B5188 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1320AB961B196C5B008B5188 /* BlockLooper.app */,
+				1320ABAB1B196C5B008B5188 /* BlockLooperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1320AB981B196C5B008B5188 /* BlockLooper */ = {
+			isa = PBXGroup;
+			children = (
+				1320ABBB1B196D16008B5188 /* Source */,
+				1320AB9B1B196C5B008B5188 /* AppDelegate.swift */,
+				1320AB9D1B196C5B008B5188 /* ViewController.swift */,
+				1320ABA21B196C5B008B5188 /* Images.xcassets */,
+				1320AB991B196C5B008B5188 /* Supporting Files */,
+			);
+			path = BlockLooper;
+			sourceTree = "<group>";
+		};
+		1320AB991B196C5B008B5188 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1320AB9A1B196C5B008B5188 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1320ABAE1B196C5B008B5188 /* BlockLooperTests */ = {
+			isa = PBXGroup;
+			children = (
+				1320ABB11B196C5B008B5188 /* BlockLooperTests.swift */,
+				1320ABAF1B196C5B008B5188 /* Supporting Files */,
+			);
+			path = BlockLooperTests;
+			sourceTree = "<group>";
+		};
+		1320ABAF1B196C5B008B5188 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1320ABB01B196C5B008B5188 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1320ABBB1B196D16008B5188 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1320AB951B196C5B008B5188 /* BlockLooper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1320ABB51B196C5B008B5188 /* Build configuration list for PBXNativeTarget "BlockLooper" */;
+			buildPhases = (
+				1320AB921B196C5B008B5188 /* Sources */,
+				1320AB931B196C5B008B5188 /* Frameworks */,
+				1320AB941B196C5B008B5188 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockLooper;
+			productName = BlockLooper;
+			productReference = 1320AB961B196C5B008B5188 /* BlockLooper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1320ABAA1B196C5B008B5188 /* BlockLooperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1320ABB81B196C5B008B5188 /* Build configuration list for PBXNativeTarget "BlockLooperTests" */;
+			buildPhases = (
+				1320ABA71B196C5B008B5188 /* Sources */,
+				1320ABA81B196C5B008B5188 /* Frameworks */,
+				1320ABA91B196C5B008B5188 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1320ABAD1B196C5B008B5188 /* PBXTargetDependency */,
+			);
+			name = BlockLooperTests;
+			productName = BlockLooperTests;
+			productReference = 1320ABAB1B196C5B008B5188 /* BlockLooperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1320AB8E1B196C5B008B5188 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Alexandre Leite";
+				TargetAttributes = {
+					1320AB951B196C5B008B5188 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					1320ABAA1B196C5B008B5188 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 1320AB951B196C5B008B5188;
+					};
+				};
+			};
+			buildConfigurationList = 1320AB911B196C5B008B5188 /* Build configuration list for PBXProject "BlockLooper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1320AB8D1B196C5B008B5188;
+			productRefGroup = 1320AB971B196C5B008B5188 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1320AB951B196C5B008B5188 /* BlockLooper */,
+				1320ABAA1B196C5B008B5188 /* BlockLooperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1320AB941B196C5B008B5188 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1320ABA31B196C5B008B5188 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1320ABA91B196C5B008B5188 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1320AB921B196C5B008B5188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1320AB9E1B196C5B008B5188 /* ViewController.swift in Sources */,
+				1320AB9C1B196C5B008B5188 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1320ABA71B196C5B008B5188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1320ABB21B196C5B008B5188 /* BlockLooperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1320ABAD1B196C5B008B5188 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1320AB951B196C5B008B5188 /* BlockLooper */;
+			targetProxy = 1320ABAC1B196C5B008B5188 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1320ABB31B196C5B008B5188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1320ABB41B196C5B008B5188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1320ABB61B196C5B008B5188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlockLooper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1320ABB71B196C5B008B5188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlockLooper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1320ABB91B196C5B008B5188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BlockLooperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockLooper.app/BlockLooper";
+			};
+			name = Debug;
+		};
+		1320ABBA1B196C5B008B5188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BlockLooperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockLooper.app/BlockLooper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1320AB911B196C5B008B5188 /* Build configuration list for PBXProject "BlockLooper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1320ABB31B196C5B008B5188 /* Debug */,
+				1320ABB41B196C5B008B5188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1320ABB51B196C5B008B5188 /* Build configuration list for PBXNativeTarget "BlockLooper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1320ABB61B196C5B008B5188 /* Debug */,
+				1320ABB71B196C5B008B5188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1320ABB81B196C5B008B5188 /* Build configuration list for PBXNativeTarget "BlockLooperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1320ABB91B196C5B008B5188 /* Debug */,
+				1320ABBA1B196C5B008B5188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1320AB8E1B196C5B008B5188 /* Project object */;
+}
