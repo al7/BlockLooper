@@ -12,6 +12,7 @@
 		1320ABA31B196C5B008B5188 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1320ABA21B196C5B008B5188 /* Images.xcassets */; };
 		1320ABB21B196C5B008B5188 /* BlockLooperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320ABB11B196C5B008B5188 /* BlockLooperTests.swift */; };
 		1320ABBD1B19750A008B5188 /* BlockLooper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320ABBC1B19750A008B5188 /* BlockLooper.swift */; };
+		1320ABC81B1F4C5A008B5188 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1320ABC71B1F4C5A008B5188 /* Launch Screen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		1320ABB01B196C5B008B5188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1320ABB11B196C5B008B5188 /* BlockLooperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockLooperTests.swift; sourceTree = "<group>"; };
 		1320ABBC1B19750A008B5188 /* BlockLooper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockLooper.swift; sourceTree = "<group>"; };
+		1320ABC71B1F4C5A008B5188 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				1320AB9D1B196C5B008B5188 /* ViewController.swift */,
 				1320ABA21B196C5B008B5188 /* Images.xcassets */,
 				1320AB991B196C5B008B5188 /* Supporting Files */,
+				1320ABC71B1F4C5A008B5188 /* Launch Screen.xib */,
 			);
 			path = BlockLooper;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1320ABA31B196C5B008B5188 /* Images.xcassets in Resources */,
+				1320ABC81B1F4C5A008B5188 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +400,7 @@
 				1320ABB71B196C5B008B5188 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1320ABB81B196C5B008B5188 /* Build configuration list for PBXNativeTarget "BlockLooperTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +409,7 @@
 				1320ABBA1B196C5B008B5188 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
