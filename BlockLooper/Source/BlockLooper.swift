@@ -22,7 +22,7 @@ THE SOFTWARE.
 
 */
 
-import UIKit
+import Foundation
 
 public typealias LoopableBlock = () -> Bool
 
