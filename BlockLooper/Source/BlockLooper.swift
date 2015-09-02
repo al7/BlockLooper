@@ -29,7 +29,7 @@ public typealias LoopableBlock = () -> Bool
 public class BlockLooper {
     
     public class func executeBlockWithRate(rate: NSTimeInterval, block: LoopableBlock) {
-        var newLoopInstance = LoopInstance(rate: rate, loopableBlock: block)
+        let newLoopInstance = LoopInstance(rate: rate, loopableBlock: block)
         newLoopInstance.index = self.helper.nextIndex
         newLoopInstance.endBlock = {
             loopInstance, event in
@@ -66,7 +66,7 @@ public class BlockLooper {
         var loopInstances: LoopInstances = []
         
         func isLoopInstanceScheduled(loopInstance: LoopInstance) -> Bool {
-            if let index = find(self.loopInstances, loopInstance) {
+            if let _ = self.loopInstances.indexOf(loopInstance) {
                 return true
             }
             return false
@@ -82,7 +82,7 @@ public class BlockLooper {
         }
         
         func dismissLoopInstance(loopInstance: LoopInstance) -> Bool {
-            if let index = find(self.loopInstances, loopInstance) {
+            if let index = self.loopInstances.indexOf(loopInstance) {
                 loopInstance.cleanUp()
                 self.loopInstances.removeAtIndex(index)
                 return true
@@ -91,7 +91,7 @@ public class BlockLooper {
         }
     }
     
-    class LoopInstance: NSObject, Equatable {
+    class LoopInstance: NSObject {
         private var rate: NSTimeInterval = 1.0
         private var loopableBlock: LoopableBlock
         private var loopTimer: NSTimer?

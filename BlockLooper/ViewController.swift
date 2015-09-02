@@ -77,7 +77,7 @@ class ViewController: UIViewController {
             let columnI = cellI % self.columns
             let rowI = Int(floor(Double(cellI) / Double(self.rows)))
             
-            var newLabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: self.cellSpan, height: self.cellSpan))
+            let newLabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: self.cellSpan, height: self.cellSpan))
             newLabel.textColor = UIColor.blueColor()
             newLabel.font = UIFont.boldSystemFontOfSize(24.0)
             newLabel.textAlignment = .Center
