@@ -32,14 +32,14 @@ class ViewController: UIViewController {
     var cellSpan: CGFloat = 0.0
     
     override func loadView() {
-        self.view = UIView(frame: UIScreen.mainScreen().bounds)
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view = UIView(frame: UIScreen.main.bounds)
+        self.view.backgroundColor = UIColor.white
         
-        let screenSize = UIScreen.mainScreen().bounds.size
+        let screenSize = UIScreen.main.bounds.size
         let squareSpan = min(screenSize.width, screenSize.height) - 100.0
     
-        self.sampleSquare = UIView(frame: CGRectMake(0.0, 0.0, squareSpan, squareSpan))
-        self.sampleSquare!.layer.borderColor = UIColor.blueColor().CGColor
+        self.sampleSquare = UIView(frame: CGRect(x: 0.0, y: 0.0, width: squareSpan, height: squareSpan))
+        self.sampleSquare!.layer.borderColor = UIColor.blue.cgColor
         self.sampleSquare!.layer.borderWidth = 1.0
         self.sampleSquare!.center = self.view.center
         
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         self.cellSpan = self.sampleSquare!.frame.size.width / CGFloat(self.columns)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.performSampleCode()
     }
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     
     //MARK- Helper Methods
     
-    private func performSampleCode() {
+    fileprivate func performSampleCode() {
 
         //--- HERE IS HOW TO USE THE COMPONENT:
         var cellI = 0
@@ -78,26 +78,26 @@ class ViewController: UIViewController {
             let rowI = Int(floor(Double(cellI) / Double(self.rows)))
             
             let newLabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: self.cellSpan, height: self.cellSpan))
-            newLabel.textColor = UIColor.blueColor()
-            newLabel.font = UIFont.boldSystemFontOfSize(24.0)
-            newLabel.textAlignment = .Center
+            newLabel.textColor = UIColor.blue
+            newLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
+            newLabel.textAlignment = .center
             newLabel.text = "\(cellI)"
-            newLabel.layer.borderColor = UIColor.blueColor().CGColor
+            newLabel.layer.borderColor = UIColor.blue.cgColor
             newLabel.layer.borderWidth = 1.0
             newLabel.backgroundColor = UIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: currentColorShade)
             newLabel.alpha = 0.0
             
             self.sampleSquare!.addSubview(newLabel)
             
-            UIView.animateWithDuration(0.5) {
+            UIView.animate(withDuration: 0.5, animations: {
                 var newFrame = newLabel.frame
                 newFrame.origin.x = self.cellSpan * CGFloat(columnI)
                 newFrame.origin.y = self.cellSpan * CGFloat(rowI)
                 newLabel.frame = newFrame
                 newLabel.alpha = 1.0
-            }
+            }) 
             
-            cellI++
+            cellI += cellI
             currentColorShade += colorIncrement
             if cellI >= totalCells {
                 return true
