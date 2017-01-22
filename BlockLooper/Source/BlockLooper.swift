@@ -26,9 +26,18 @@ import Foundation
 
 public typealias LoopableBlock = () -> Bool
 
-public class BlockLooper {
+open class BlockLooper {
+
+    struct Static {
+        static var instance: Helper?
+        static var token: Int = 0
+    }
+
+    private static var __once: () = {
+            Static.instance = Helper()
+        }()
     
-    public class func executeBlockWithRate(rate: NSTimeInterval, block: LoopableBlock) {
+    open class func executeBlockWithRate(_ rate: TimeInterval, block: @escaping LoopableBlock) {
         let newLoopInstance = LoopInstance(rate: rate, loopableBlock: block)
         newLoopInstance.index = self.helper.nextIndex
         newLoopInstance.endBlock = {
@@ -41,14 +50,8 @@ public class BlockLooper {
     //MARK- Singleton Methods
     
     static var helper: Helper {
-        struct Static {
-            static var instance: Helper?
-            static var token: dispatch_once_t = 0
-        }
-        
-        dispatch_once(&Static.token) {
-            Static.instance = Helper()
-        }
+
+        _ = BlockLooper.__once
         
         return Static.instance!
     }
@@ -56,23 +59,23 @@ public class BlockLooper {
     //MARK- Helper Classes
     
     class Helper {
-        private var loopIndex = 0
+        fileprivate var loopIndex = 0
         var nextIndex: Int {
             let result = self.loopIndex
-            ++self.loopIndex
+            self.loopIndex += 1
             return result
         }
         
         var loopInstances: LoopInstances = []
         
-        func isLoopInstanceScheduled(loopInstance: LoopInstance) -> Bool {
-            if let _ = self.loopInstances.indexOf(loopInstance) {
+        func isLoopInstanceScheduled(_ loopInstance: LoopInstance) -> Bool {
+            if let _ = self.loopInstances.index(of: loopInstance) {
                 return true
             }
             return false
         }
         
-        func scheduleLoopInstance(loopInstance: LoopInstance) -> Bool {
+        func scheduleLoopInstance(_ loopInstance: LoopInstance) -> Bool {
             if self.isLoopInstanceScheduled(loopInstance) == false {
                 self.loopInstances.append(loopInstance)
                 loopInstance.start()
@@ -81,10 +84,10 @@ public class BlockLooper {
             return false
         }
         
-        func dismissLoopInstance(loopInstance: LoopInstance) -> Bool {
-            if let index = self.loopInstances.indexOf(loopInstance) {
+        func dismissLoopInstance(_ loopInstance: LoopInstance) -> Bool {
+            if let index = self.loopInstances.index(of: loopInstance) {
                 loopInstance.cleanUp()
-                self.loopInstances.removeAtIndex(index)
+                self.loopInstances.remove(at: index)
                 return true
             }
             return false
@@ -92,17 +95,17 @@ public class BlockLooper {
     }
     
     class LoopInstance: NSObject {
-        private var rate: NSTimeInterval = 1.0
-        private var loopableBlock: LoopableBlock
-        private var loopTimer: NSTimer?
-        private var hasStarted = false
+        fileprivate var rate: TimeInterval = 1.0
+        fileprivate var loopableBlock: LoopableBlock
+        fileprivate var loopTimer: Timer?
+        fileprivate var hasStarted = false
         
         var index = 0
         var startBlock: LoopLifecycleBlock?
         var stepBlock: LoopLifecycleBlock?
         var endBlock: LoopLifecycleBlock?
         
-        init(rate: NSTimeInterval, loopableBlock: LoopableBlock!) {
+        init(rate: TimeInterval, loopableBlock: LoopableBlock!) {
             self.rate = rate
             self.loopableBlock = loopableBlock
         }
@@ -112,10 +115,10 @@ public class BlockLooper {
                 hasStarted = true
                 
                 if let startBlock = self.startBlock {
-                    startBlock(loopInstance: self, event: .Start)
+                    startBlock(self, .start)
                 }
                 
-                self.loopTimer = NSTimer.scheduledTimerWithTimeInterval(self.rate, target: self, selector: "onTimerTick:", userInfo: nil, repeats: true)
+                self.loopTimer = Timer.scheduledTimer(timeInterval: self.rate, target: self, selector: #selector(LoopInstance.onTimerTick(_:)), userInfo: nil, repeats: true)
             }
             else {
                 if let timer = self.loopTimer {
@@ -137,27 +140,27 @@ public class BlockLooper {
             self.endBlock = nil
         }
         
-        func onTimerTick(sender: NSTimer!) {
+        func onTimerTick(_ sender: Timer!) {
             if let stepBlock = self.stepBlock {
-                stepBlock(loopInstance: self, event: .Step)
+                stepBlock(self, .step)
             }
             
             let shouldFinish = self.loopableBlock()
             if shouldFinish {
                 self.stop()
                 if let endBlock = self.endBlock {
-                    endBlock(loopInstance: self, event: .End)
+                    endBlock(self, .end)
                 }
             }
         }
     }
     
     enum LoopLifecycleEvent {
-        case Start, Step, End
+        case start, step, end
     }
     
     typealias LoopInstances = [LoopInstance]
-    typealias LoopLifecycleBlock = (loopInstance: LoopInstance, event: LoopLifecycleEvent) -> Void
+    typealias LoopLifecycleBlock = (_ loopInstance: LoopInstance, _ event: LoopLifecycleEvent) -> Void
 }
 
 func ==(lhs: BlockLooper.LoopInstance, rhs: BlockLooper.LoopInstance) -> Bool {
